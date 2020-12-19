@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             x:Class="lang6.Page2"
+             Title="포스트잇 알고리즘 실험(동사+접속사 추출)">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+"
+                     Clicked="OnNoteAddedClicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ListView x:Name="리스트뷰"
+              Margin="20"
+              ItemSelected="OnListViewItemSelected"              
+              android:ListView.IsFastScrollEnabled="True">
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Text}"
+                          Detail="{Binding Date}"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

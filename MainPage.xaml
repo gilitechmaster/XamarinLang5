@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lang6.MainPage">
+
+    <StackLayout Margin="10,35,10,10">
+
+        <Label Text="자연어처리 테스트 터치후 입력" 
+           HorizontalOptions="Center"
+           FontAttributes="Bold"/>
+
+        <Editor x:Name="editor"
+                Placeholder="텍스트 입력하세요"
+                HeightRequest="100"/>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Text="저장"
+                    Clicked="OnSaveButtonClicked" />
+            <Button Grid.Column="1"
+                    Text="Delete"
+                    Clicked="OnDeleteButtonClicked"/>
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>

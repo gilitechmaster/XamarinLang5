@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
+             x:Class="lang6.Page1"
+             Title="입력한 문서">
+    <StackLayout Margin="20">
+
+
+        <Editor Placeholder="텍스트 입력 하세요!"
+                Text="{Binding Text}"
+                HeightRequest="650"/>
+
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <Button Text="저장"
+                    Clicked="OnSaveButtonClicked"/>
+            <Button Grid.Column="1"
+                    Text="조합"
+                    BackgroundColor="LightGoldenrodYellow"
+                    Clicked="OnCalc1ButtonClicked"/>
+            <Button Grid.Column="2"
+                    Text="분해"
+                    BackgroundColor="LightGoldenrodYellow"
+                    Clicked="OnCalc2ButtonClicked"/>
+            <Button Grid.Column="3"
+                    Text="삭제"
+                    Clicked="OnDeleteButtonClicked"/>
+        </Grid>
+
+
+
+
+
+    </StackLayout>
+</ContentPage>
